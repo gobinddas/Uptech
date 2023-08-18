@@ -1,0 +1,280 @@
+.quote {
+  width: 100%;
+  background: url(../images/p5.jpg) no-repeat fixed center center/cover;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 100px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(rgb(102, 102, 208), 0.7);
+
+    transition: 0.5s all;
+    height: 100%;
+    z-index: -1;
+
+  }
+
+  .bgimage {
+
+
+    .header-section {
+      .header-des {
+        color: $secondaryColor;
+      }
+
+      .header-main {
+        color: $white;
+      }
+
+      .des-des {
+        color: $white;
+      }
+    }
+  }
+}
+
+.form-section {
+  .double {
+    display: flex;
+    justify-content: space-between;
+
+
+    .form {
+      width: 45%;
+      margin-top: -100px;
+      z-index: 40;
+      background-color: $white;
+
+      form {
+        border: 1px solid $t-color;
+        padding: 60px 40px 60px 40px;
+        box-shadow: 7px 7px 0 0 $secondaryColor;
+
+        .form-heading {
+          font-size: 24px;
+          color: $primaryColor;
+          font-weight: 800;
+          margin-bottom: 20px;
+
+        }
+
+        .form-group {
+          margin: 20px 0px;
+
+          input,
+          textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid $t-color;
+            outline: none;
+
+            &::placeholder {
+              color: $black;
+              font-size: 16px;
+            }
+
+
+          }
+
+          .submit {
+            background-color: $primaryColor;
+            color: $white;
+            font-weight: 700;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid $primaryColor;
+            outline: none;
+            transition: 0.5s;
+
+            &:hover {
+              background-color: transparent;
+              color: $primaryColor;
+            }
+
+
+
+          }
+
+
+        }
+      }
+    }
+
+    .content {
+      width: 45%;
+
+      .header-section {
+        .header-des {
+          color: $secondaryColor;
+          font-size: 14px;
+
+        }
+
+        .header-main {
+          font-size: 22px;
+        }
+
+        .des-des {
+          font-size: 14px;
+        }
+      }
+
+      .plain {
+        width: 150px;
+        border-top: 1px solid $t-color;
+      }
+
+      .details {
+        font-size: 14px;
+        color: $black;
+        margin: 15px 0px;
+
+        span {
+          margin-right: 10px;
+          font-weight: 600;
+
+        }
+      }
+
+      .area {
+        font-size: 20px;
+        color: $primaryColor;
+        font-weight: 800;
+        margin: 10px 0px 20px 0px;
+      }
+
+      .area-list {
+        color: $black;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+@include custom_max(992px) {
+
+  .form-section {
+    .double {
+
+      flex-direction: column;
+      gap: 30px;
+
+
+      .form {
+        width: 100%;
+
+
+
+      }
+
+      .content {
+        width: 100%;
+
+
+      }
+    }
+  }
+
+}
+
+
+
+@include custom_max(576px) {
+
+
+  .form-section {
+    .double {
+
+
+
+      .form {
+
+
+        form {
+          padding: 40px 20px;
+          box-shadow: 4px 4px 0 0 $secondaryColor;
+
+          .form-heading {
+            font-size: 18px;
+
+            margin-bottom: 10px;
+
+          }
+
+          .form-group {
+            margin: 10px 0px;
+
+            input,
+            textarea {
+              padding: 7px;
+              font-size: 14px;
+
+              &::placeholder {
+                font-size: 14px;
+              }
+
+
+            }
+
+            .submit {
+              padding: 7px;
+
+
+
+
+
+
+            }
+
+
+          }
+        }
+      }
+
+      .content {
+
+        .header-section {
+
+
+          .header-main {
+            font-size: 18px;
+          }
+
+
+        }
+
+
+
+        .details {
+
+          margin: 7px 0px;
+
+          span {
+            margin-right: 10px;
+
+          }
+        }
+
+        .area {
+          font-size: 18px;
+
+          margin: 7px 0px 10px 0px;
+        }
+
+        .area-list {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+
+}

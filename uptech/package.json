@@ -1,0 +1,27 @@
+{
+  "name": "lemuzin.com.au",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp php"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/code-comma/au/lemuzin.com.au.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/code-comma/au/lemuzin.com.au/issues"
+  },
+  "homepage": "https://gitlab.com/code-comma/au/lemuzin.com.au#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-php2html": "^1.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
+    "php2html": "^4.0.0",
+    "sass": "^1.52.3"
+  }
+}

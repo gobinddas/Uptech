@@ -1,0 +1,254 @@
+header {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+
+    .header-top {
+        background: $secondaryColor;
+        padding: 10px 50px;
+
+        .header-wrapper {
+            justify-content: space-between;
+
+            h6 {
+                font-size: 16px;
+                padding-right: 20px;
+                color: $black;
+            }
+
+            a {
+                font-size: 16px;
+                color: $black;
+                padding-left: 20px;
+                transition: 0.5s ease-in-out all;
+
+                &:hover {
+                    color: $white;
+                    text-decoration: underline;
+                }
+            }
+
+            .icons {
+                a {
+                    color: $black;
+                    padding: 8px 10px;
+                    transition: 0.5s ease-in-out all;
+                    font-size: 18px;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        background: transparent;
+        padding: 0;
+
+        &.fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: $secondaryColor;
+            transition: 0.5s ease-in-out all;
+            max-height: 120px;
+
+            .navbar-brand {
+                width: 400px;
+
+                p {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: $white;
+                }
+
+            }
+
+            nav {
+                padding: 0px 70px;
+                box-sizing: content-box;
+
+                .navbar-nav {
+                    li {
+                        .nav-link {
+                            color: #fff;
+
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        nav {
+            padding: 0px 70px;
+
+
+            .navbar-brand {
+                width: 400px;
+
+                p {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: $white;
+                }
+
+            }
+
+            .navbar-nav {
+                align-items: center;
+                text-align: center;
+
+                li {
+                    .nav-link {
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: #fff;
+                        text-transform: capitalize;
+                        letter-spacing: 1px;
+                        margin-right: 12px;
+                        transition: 0.5s ease-in-out all;
+
+                        &:hover {
+                            color: $primaryColor;
+                        }
+                    }
+
+
+
+                    &.active {
+                        .nav-link {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+@include custom_max(992px) {
+    header {
+
+
+        .header-bottom {
+            nav {
+
+
+                .navbar-nav {
+                    background: $secondaryColor;
+                    text-align: center;
+
+                    li {
+                        .nav-link {
+                            font-size: 13px;
+                            margin-right: 0;
+                        }
+
+
+                    }
+                }
+            }
+
+
+
+
+        }
+    }
+}
+
+@include custom_max(768px) {
+
+
+    header {
+
+
+
+
+        .header-bottom {
+
+
+            &.fixed-header {
+
+
+                .navbar-brand {
+                    width: 200px;
+
+                    p {
+                        font-size: 22px;
+
+                    }
+
+                }
+
+                nav {
+                    padding: 0px 20px;
+
+                }
+
+
+            }
+
+            nav {
+
+                padding: 0px 20px;
+
+                .navbar-brand {
+                    width: 200px;
+
+                    p {
+                        font-size: 22px;
+
+                    }
+
+                }
+
+
+
+            }
+        }
+    }
+
+
+}
+
+@include custom_max(580px) {
+    header {
+        .header-top {
+            padding: 10px 20px;
+
+            .header-wrapper {
+                flex-direction: column;
+                align-items: center;
+
+                h6 {
+                    font-size: 12px;
+                }
+
+                a {
+                    font-size: 12px;
+
+
+                }
+
+                .icons {
+                    a {
+                        font-size: 16px;
+
+
+                    }
+                }
+            }
+        }
+    }
+}

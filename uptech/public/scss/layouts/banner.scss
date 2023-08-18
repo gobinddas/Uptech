@@ -1,0 +1,260 @@
+.banner {
+
+  .top-banner {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/plumbing-home.jpg) no-repeat center center/cover;
+    position: relative;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($blue, 0.7);
+      transition: 0.5s all;
+      height: 100%;
+      z-index: -1;
+
+    }
+
+    .inner-banner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 200px;
+      gap: 40px;
+
+      .content {
+        width: calc(50%);
+        display: inline-block;
+
+        h6 {
+          font-size: 18px;
+          color: white;
+
+        }
+
+        .main-heading {
+          font-size: 80px;
+          color: $white;
+          font-weight: 700;
+          text-transform: capitalize;
+          line-height: 1.1;
+          margin: 20px 0px;
+
+          span {
+            color: $secondaryColor;
+          }
+        }
+
+        .btn {
+          margin-top: 20px;
+        }
+      }
+
+      .slider-block {
+
+        width: calc(40%);
+
+        .slider-banner {
+
+
+          .block {
+            width: 100%;
+            height: 80vh;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .button-banner {
+    background-color: $secondaryColor;
+
+    h5 {
+      font-size: 50px;
+      color: $white;
+      font-weight: 700;
+    }
+
+  }
+}
+
+
+
+@include custom_max(1200px) {
+
+  .banner {
+
+    .top-banner {
+
+      .inner-banner {
+
+        .content {
+
+
+          .main-heading {
+            font-size: 70px;
+          }
+        }
+      }
+
+    }
+
+    .button-banner {
+
+      h5 {
+        font-size: 40px;
+      }
+
+    }
+  }
+
+
+}
+
+
+
+@include custom_max(992px) {
+
+  .banner {
+
+    .top-banner {
+
+
+
+
+      .inner-banner {
+        flex-direction: column;
+        padding-top: 150px;
+        gap: 40px;
+
+        .content {
+          width: calc(100%);
+
+          h6 {
+            font-size: 16px;
+
+          }
+
+          .main-heading {
+            font-size: 40px;
+            margin: 15px 0px;
+
+
+          }
+
+          .btn {
+            margin-top: 15px;
+          }
+        }
+
+        .slider-block {
+
+          width: calc(100%);
+
+          .slider-banner {
+            overflow: hidden;
+
+            .block {
+              width: 100%;
+              height: 40vh;
+
+
+            }
+          }
+        }
+
+      }
+
+    }
+
+    .button-banner {
+
+      h5 {
+        font-size: 30px;
+      }
+
+    }
+  }
+}
+
+
+
+
+@include custom_max(576px) {
+
+  .banner {
+
+    .top-banner {
+
+
+
+
+      .inner-banner {
+        flex-direction: column;
+        padding-top: 150px;
+        gap: 40px;
+
+        .content {
+          width: calc(100%);
+
+          h6 {
+            font-size: 14px;
+
+          }
+
+          .main-heading {
+            font-size: 32px;
+            margin: 10px 0px;
+
+
+          }
+
+          .btn {
+            margin-top: 15px;
+          }
+        }
+
+        .slider-block {
+
+          width: calc(100%);
+
+          .slider-banner {
+            overflow: hidden;
+
+            .block {
+              width: 100%;
+              height: 40vh;
+
+
+            }
+          }
+        }
+
+      }
+
+    }
+
+    .button-banner {
+
+      h5 {
+        text-align: center;
+        font-size: 24px;
+      }
+
+    }
+  }
+}

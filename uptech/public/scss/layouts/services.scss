@@ -1,0 +1,147 @@
+.services {
+    position: relative;
+
+    .bg-soft {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 60vh;
+        background-color: #f9faff;
+        z-index: -1;
+
+    }
+
+    .service-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .item {
+            flex-basis: calc(100% / 2 - 40px);
+
+            padding: 30px 20px;
+            border: 2px solid $secondaryColor;
+            position: relative;
+
+            .service-title {
+                font-size: 24px;
+                color: $primaryColor;
+                font-weight: 500;
+            }
+
+            .service-dis {
+                font-size: 16px;
+                color: $black;
+                margin: 20px 0px;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .details {
+                font-size: 16px;
+                color: $secondaryColor;
+                text-align: right;
+
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: -7px;
+                width: 7px;
+                height: 80px;
+                background-color: $primaryColor;
+                z-index: -1;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -7px;
+                right: -7px;
+                width: 80px;
+                height: 7px;
+                background-color: $primaryColor;
+                z-index: -1;
+            }
+        }
+
+        .coll {
+            flex-basis: 40%;
+        }
+    }
+}
+
+
+@include custom_max(992px) {
+    .services {
+
+
+
+        .service-list {
+
+            gap: 20px;
+            flex-direction: column;
+
+            .item {
+                flex-basis: calc(100%);
+
+            }
+
+            .coll {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+}
+
+
+
+@include custom_max(576px) {
+    .services {
+
+
+
+        .service-list {
+
+            gap: 20px;
+            flex-direction: column;
+
+            .item {
+                flex-basis: calc(100%);
+
+                padding: 20px 10px;
+
+                .service-title {
+                    font-size: 20px;
+
+                }
+
+                .service-dis {
+                    font-size: 14px;
+                    margin: 10px 0px;
+
+
+                }
+
+                .details {
+                    font-size: 14px;
+
+
+                }
+            }
+
+
+        }
+    }
+
+}

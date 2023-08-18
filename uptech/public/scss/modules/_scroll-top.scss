@@ -1,0 +1,67 @@
+/* -- Sroll To Top on Click -- */
+
+.scrollevent {
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    &:hover {
+      font-style: normal;
+    }
+    .btn-scroll-up {
+      padding: 5px 6px;
+      background-color: $primaryColor;
+      box-shadow: none;
+      border: 1px solid;
+      border-color: darken($primaryColor, 10%);
+      border-radius: 5px 5px 0 0;
+      color: #fff;
+      transition: 0.6s all;
+      cursor: pointer;
+      i {
+        transform: translateY(0);
+        transition: 0.6s all;
+        color: #fff;
+      }
+      &:hover {
+        i {
+          transform: translateY(-5px);
+        }
+      }
+      &:focus {
+        text-decoration: none;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
+
+.scrollToTop {
+  z-index: 9999;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  display: none !important;
+  cursor: pointer;
+  &.d-block {
+    display: block !important;
+  }
+  @include custom_max(767px) {
+    &.d-block {
+      display: none !important;
+    }
+  }
+  button {
+    i {
+      padding: 3px;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}

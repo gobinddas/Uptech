@@ -1,0 +1,115 @@
+.section {
+    padding: 60px 0;
+}
+
+.header-section {
+    .header-des {
+        font-size: 18px;
+        color: $primaryColor;
+        margin-bottom: 10px;
+
+        &:after {
+            content: "";
+            border: 2px solid $secondaryColor;
+            display: inline-block;
+            width: 50px;
+            margin: auto 10px;
+        }
+    }
+
+    .header-main {
+        font-size: 60px;
+        color: $primaryColor;
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    .des-des {
+        font-size: 18px;
+        color: $black;
+        line-height: 1.5;
+        margin: 20px 0px;
+    }
+}
+
+
+
+@include custom_max(1200px) {
+    .header-section {
+        .header-des {
+            font-size: 16px;
+
+
+
+        }
+
+        .header-main {
+            font-size: 50px;
+
+        }
+
+        .des-des {
+            font-size: 16px;
+
+        }
+    }
+
+
+}
+
+
+@include custom_max(992px) {
+    .header-section {
+        .header-des {
+            font-size: 16px;
+
+
+
+        }
+
+        .header-main {
+            font-size: 40px;
+
+        }
+
+        .des-des {
+            font-size: 16px;
+
+        }
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+
+}
+
+
+@include custom_max(576px) {
+    .header-section {
+        .header-des {
+            font-size: 14px;
+
+
+
+        }
+
+        .header-main {
+            font-size: 28px;
+
+        }
+
+        .des-des {
+            font-size: 14px;
+            margin: 10px 0px;
+
+        }
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+
+
+}
